@@ -1,0 +1,23 @@
+<script>
+    // primititves are compared by value , non-primitives are compared by referrence/address
+    let a = 10;
+    let b = 10;
+
+    console.log('a == b',a==b);//true
+
+    let str1 = 'String';
+    let str2=  'String';
+
+    console.log('str1 == str2',str1==str2);//true
+
+    let arr = ['1','2','3','4'];
+    let arr2 = ['1','2','3','4'];
+
+    console.log('arr == arr2',arr==arr2);//false
+
+    let obj = {x:100, y:200};
+    let obj2 = {x:100, y:200};
+
+    console.log('obj == obj2',obj==obj2);//false
+
+</script>
