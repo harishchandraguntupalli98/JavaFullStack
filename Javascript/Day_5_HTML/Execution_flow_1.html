@@ -1,0 +1,23 @@
+<script>
+    console.log('Global Code Starts here...')
+    let a = 10;
+    let b = 20;
+
+    console.log(`a:${a} b:${b}`)
+    function f1(){
+        console.log('F1 Function Starts..')
+        f2();
+        console.log('F1 Function Ends..')
+    }
+    function f2(){
+        console.log('F2 Function Starts..')
+        f3();
+        console.log('F2 Function Ends..')
+    }
+    function f3(){
+        console.log('F3 Function Starts..')
+        console.log('F3 Function Ends..')
+    }
+    f1();
+    console.log('Global Code Ends here...')
+</script>
