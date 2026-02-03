@@ -1,0 +1,21 @@
+<script>
+    var a = 10;
+    let b = 20;
+    const c  = 30;
+    console.log(`a: ${a} b: ${b} c: ${c}`) //Global Scope
+    
+    function scope1(){
+        var a = 10;
+        let b = 20;
+        const c  = 30;
+        console.log(`a: ${a} b: ${b} c: ${c}`) //Function Scope
+
+        if(true){
+            var a = 10;
+            let b = 20;
+            const c  = 30;
+            console.log(`a: ${a} b: ${b} c: ${c}`) //Block Scope
+        }
+    }
+    scope1();
+</script>
