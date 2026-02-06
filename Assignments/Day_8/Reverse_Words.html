@@ -1,15 +1,11 @@
 <script>
-    let input = 'This is javascript class';
-    let words = input.split(' ');
-    let reversedWords = '';
+    let input = 'This is javascript class'
+    let arrInput = input.split(" ");
+    let reverseWords = '';
 
-    for(let word of words){
-        reversedWords = word+' '+reversedWords;
-        if(word=='is'){
-            console.log(word)
-            break;
-        }
+    for(let word of arrInput){
+
+        reverseWords = word + reverseWords+" ";
     }
-
-    console.log(reversedWords)
+    console.log(reverseWords)
 </script>
