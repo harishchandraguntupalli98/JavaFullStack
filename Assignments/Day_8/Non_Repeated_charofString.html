@@ -1,0 +1,16 @@
+<!-- WAP to print the first non-repeated character in a string
+   input:- 'entertainment'
+   output:- r -->
+
+
+<script>
+    let str = 'enezrtainment'
+    let i =0;
+
+    for(let rev of str){
+        if(str.indexOf(rev)===str.lastIndexOf(rev)){
+            console.log(rev,'',i)
+            break;
+        }   
+    }
+</script>

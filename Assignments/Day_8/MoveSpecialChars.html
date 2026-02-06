@@ -1,0 +1,23 @@
+<script>
+    let input = 'hello@#hi&';
+
+    let normalChars = '';
+    let specialChars = '';
+
+    for (let char of input) {
+
+        if (
+            (char >= 'a' && char <= 'z') ||
+            (char >= 'A' && char <= 'Z') ||
+            (char >= '0' && char <= '9')
+        ) {
+            normalChars += char;
+        } else {
+            specialChars += char;
+        }
+    }
+
+    let result = normalChars + specialChars;
+
+    console.log(result);
+</script>

@@ -1,0 +1,8 @@
+<script>
+    let accNum = '12345678987';
+    let firstPart = accNum.slice(0, 2);
+    let lastPart = accNum.slice(-2);
+    let maskedPart = '*'.repeat(accNum.length - 4);
+    let result = firstPart + maskedPart + lastPart;
+    console.log(result);
+</script>
