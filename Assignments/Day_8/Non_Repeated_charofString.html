@@ -4,13 +4,14 @@
 
 
 <script>
-    let str = 'enezrtainment'
-    let i =0;
+    
+   let str = 'entertainment'
+   for(let rev of str){
 
-    for(let rev of str){
-        if(str.indexOf(rev)===str.lastIndexOf(rev)){
-            console.log(rev,'',i)
-            break;
-        }   
+    if(str.indexOf(rev)==str.lastIndexOf(rev)){
+
+        console.log(rev);
+        break;
     }
+   }
 </script>
