@@ -1,0 +1,16 @@
+<script>
+    let str = 'Rabindra Nath Tagore';
+
+    let words = str.split(' ');
+    let result = '';
+
+    for (let i = 0; i < words.length; i++) {
+
+        if (i === words.length - 1) {
+            result += words[i];   // last word full
+        } else {
+            result += words[i][0] + '. ';
+        }
+    }
+    console.log(result);
+</script>

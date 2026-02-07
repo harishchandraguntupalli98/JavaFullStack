@@ -1,0 +1,23 @@
+<script>
+
+    var str = window.prompt("Enter a string:");
+    
+    var result = "";
+    var count = 1;
+
+    for(var i = 0; i < str.length; i++){
+
+        // if current char equals next char
+        if(str.charAt(i) === str.charAt(i+1)){
+            count++;
+        }
+        else{
+            result = result + str.charAt(i) + count;
+            count = 1;
+        }
+
+    } 
+
+    console.log(result);
+
+</script>

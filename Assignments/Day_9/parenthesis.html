@@ -1,0 +1,31 @@
+<script>
+    var input = window.prompt("Enter parentheses sequence:");
+
+    var stack = [];
+    var isValid = true;
+
+    for(var char of input){
+
+        if(char === '(' || char === '{' || char === '['){
+            stack.push(char);
+        }
+
+        else if(char === ')' || char === '}' || char === ']'){
+
+            var last = stack.pop();
+
+            if(
+                (char === ')' && last !== '(') ||
+                (char === '}' && last !== '{') ||
+                (char === ']' && last !== '[')
+            ){
+                isValid = false;
+                break;
+            }
+        }
+    }
+    if(stack.length !== 0){
+        isValid = false;
+    }
+    window.alert(isValid);
+</script>

@@ -1,0 +1,22 @@
+<script>
+
+    var str = 'abcxyz';
+    var result = '';
+
+    // iterating using for-of loop
+    for(var char of str){
+
+        // get ASCII value using charCodeAt()
+        var code = char.charCodeAt();
+
+        // if character is 'z'
+        if(char === 'z'){
+            result += 'a';
+        }
+        else{
+            // convert ASCII to next character using fromCharCode()
+            result += String.fromCharCode(code + 1);
+        }
+    }
+    console.log(result);
+</script>

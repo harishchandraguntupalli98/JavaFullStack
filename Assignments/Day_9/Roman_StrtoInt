@@ -1,0 +1,30 @@
+<script>
+
+    // take input from user
+    var roman = window.prompt("Enter Roman value:");
+
+    var symbols = ['I','V','X','L','C','D','M'];
+    var values  = [ 1 , 5 ,10 ,50 ,100,500,1000];
+
+    var total = 0;
+
+    for(var i=0; i<roman.length; i++){
+
+        var currentIndex = symbols.indexOf(roman[i]);
+        var nextIndex = symbols.indexOf(roman[i+1]);
+
+        var currentValue = values[currentIndex];
+        var nextValue = values[nextIndex];
+
+        // subtract case
+        if(nextValue > currentValue){
+            total = total - currentValue;
+        }
+        else{
+            total = total + currentValue;
+        }
+
+    }
+    console.log(total);
+
+</script>

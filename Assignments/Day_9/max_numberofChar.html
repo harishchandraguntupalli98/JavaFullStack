@@ -1,0 +1,26 @@
+<script>
+    let str = 'Hello World'
+    let count = {}
+
+    for(let char of str){
+        if(char != ' '){
+            if(count[char]){
+                count[char] = count[char]+1;
+            }else{
+                count[char]=1;
+            }
+        }
+    }
+
+    let maxChar = '';
+    let maxCount = 0;
+
+    for(let char in count){
+
+        if(count[char]>maxCount){
+            maxCount = count[char];
+            maxChar = char;
+        }
+    }
+    console.log(maxChar.toUpperCase());
+</script>
