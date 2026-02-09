@@ -1,0 +1,14 @@
+<Script>
+    let input = [10,20,30,40,50,10,30,50];
+
+    let count = {}
+
+    for(let num of input){
+        if(count[num]){
+            count[num] = count[num]+1;
+        }else{
+            count[num] = 1;
+        }
+    }
+    console.log(count);
+</Script>

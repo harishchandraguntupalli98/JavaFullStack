@@ -1,0 +1,22 @@
+<script>
+    let employees = [
+    { eId: 101, name: 'sanjay', sal: 5000 },
+    { eId: 102, name: 'alok', sal: 6000 },
+    { eId: 103, name: 'sanjay', sal: 7000 },
+    { eId: 104, name: 'geeta', sal: 8000 },
+    { eId: 105, name: 'alok', sal: 9000 }
+];
+
+let group = {}
+
+for(let emp of employees){
+
+    if(groupp[emp.name]){
+        group[emp.name].push(emp);
+
+    }else{
+        group[emp.name] = [emp];
+    }
+}
+console.log(group);
+</script>

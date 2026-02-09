@@ -1,0 +1,23 @@
+<script>
+    let employees = [
+    { eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+    { eId: 104, name: "reena", sal: 8000, gender: "female" }
+];
+
+let departments = [
+    { eId: 101, dept: "sales" },
+    { eId: 104, dept: "marketing" }
+];
+
+let result = employees.map(function(emp){
+
+    let deptInfo = departments.find(function(d){
+        return d.eId === emp.eId;
+    });
+    emp.dept = deptInfo.dept
+    return emp;
+});
+
+console.log(result)
+
+</script>
