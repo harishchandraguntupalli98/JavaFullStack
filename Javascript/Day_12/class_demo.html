@@ -1,0 +1,28 @@
+<script>
+    //ES5
+    function student(roll,fname,lname,course){
+        this.roll = roll;
+        this.fname = fname;
+        this.lname = lname;
+        this.course = course;
+    }
+    let std1 = new student(1,'hari','G','java');
+    
+    
+    //ES6
+
+    class Student{
+        constructor(roll,fname,lname,course){
+            this.roll = roll,
+            this.fname = fname,
+            this.lname = lname,
+            this.course = course
+        }
+    }
+
+ let std2 = new Student(10,'hARI','g','JAVA');
+ let std3 = new Student(110,'hARI2','g1','JAVA2');
+
+console.log(std2);
+console.log(std3);
+</script>

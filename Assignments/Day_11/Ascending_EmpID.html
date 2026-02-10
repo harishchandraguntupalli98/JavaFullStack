@@ -1,3 +1,4 @@
+//1. declare array of employees & sort them in ascending order (empId)
 <script>
    let employees = [
     { eId: 101, name: 'sanjay', sal: 5000, gender: 'male' },
@@ -7,18 +8,15 @@
     { eId: 105, name: 'deepak', sal: 8000, gender: 'male' }
 ];
 
-employees.sort(function(emp1, emp2) {
+employees.sort(function(emp1,emp2){
 
-    if(emp1.eId > emp2.eId){
+    if(emp1.eId>emp2.eId){
         return 1;
-    }
-    else if(emp1.eId < emp2.eId){
+    }else if(emp1.eId<emp2.eId){
         return -1;
-    }
-    else{
+    }else{
         return 0;
     }
-
-});
+})
 console.log(employees);
 </script>

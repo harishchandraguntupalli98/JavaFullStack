@@ -1,0 +1,45 @@
+//5. Find Average mark per student, find the topper student based on average mark
+//Get all students who scored avg> 85
+
+<script>
+    const students = [
+    { name: "A", marks: [80, 90, 70] },
+    { name: "B", marks: [60, 75, 85] },
+    { name: "C", marks: [95, 92, 88] }
+   ];
+   
+   let averages = {}
+   for(let student of students){
+
+        let total = 0;
+        for(let mark of student.marks){
+            total = total+mark;
+        }
+    let avg = total/student.marks.length;
+    averages[student.name] = avg;
+   }
+   console.log(averages);
+
+   let topper = '';
+   let highestAvg = 0;
+
+   for(let student in averages){
+
+        if(averages[student]>highestAvg){
+
+            highestAvg = averages[student];
+            topper = student;
+        }
+   }
+   console.log("Topper:", topper);
+   let above85 = [];
+
+    for(let student in averages){
+
+    if(averages[student] > 85){
+        above85.push(student);
+    }
+
+}
+    console.log("Above 85:", above85);
+</script>

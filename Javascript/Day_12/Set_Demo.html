@@ -1,0 +1,29 @@
+<script>
+     // create a set object
+     const planets = new Set();
+
+    // add items to set object
+    planets.add('Venus')
+    planets.add('Mars');
+    planets.add('Mercury');
+    planets.add('Earth');
+    planets.add('Venus')
+    planets.add('Earth').add('Mars'); // Chainable Method
+
+    // To Print the complete set
+    console.log(planets);
+
+    // check the size of a set
+    console.log('Set Size:', planets.size);  
+
+    // check an item exists in a set or not
+    console.log('Planets has Earth:',planets.has('Earth'));
+    // Delete an item from a set
+    console.log(planets.delete('Venus'));
+    // After delete
+    console.log(planets);
+    //Delete All the items 
+    planets.clear();
+
+    console.log(planets);
+</script>

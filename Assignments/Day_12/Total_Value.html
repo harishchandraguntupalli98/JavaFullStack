@@ -1,0 +1,24 @@
+//7. Total value(price*quantity) of medicines per category
+
+<script>
+    const medicines = [
+    { id: 1, name: "Paracetamol", price: 20, quantity: 10, category: "Pain Relief" },
+    { id: 2, name: "Amoxicillin", price: 50, quantity: 5, category: "Antibiotic" },
+    { id: 3, name: "Cetirizine", price: 15, quantity: 20, category: "Allergy" },
+    { id: 4, name: "Ibuprofen", price: 30, quantity: 7, category: "Pain Relief" },
+    { id: 5, name: "Azithromycin", price: 100, quantity: 3, category: "Antibiotic" }
+   ];
+
+    let result = {}
+
+    for(let med of medicines){
+
+        let value = med.price*med.quantity;
+        if(result[med.category]){
+            result[med.category] = result[med.category]+value;
+        }else{
+            result[med.category]= value;
+        }
+    }
+    console.log(result);
+</script>

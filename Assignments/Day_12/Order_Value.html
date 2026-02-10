@@ -1,0 +1,40 @@
+//4. Calculate total order value for each order( orderId: 1) , Find customer with highest lifetime spend(A)
+
+<script>
+    const orders = [
+    { orderId: 1, customer: "A", items: [{ price: 100, qty: 2 }, { price: 50, qty: 1 }] },
+    { orderId: 2, customer: "B", items: [{ price: 200, qty: 1 }] },
+    { orderId: 3, customer: "A", items: [{ price: 150, qty: 3 }] }
+]; 
+
+
+    let customerSpend = {}
+
+    for(let order of orders){
+
+        let total = 0;
+        for(let item of order.items){
+
+            total += item.price*item.qty;
+        }
+        if(customerSpend[order.customer]){
+
+            customerSpend[order.customer] += total;
+        }else{
+            customerSpend[order.customer] = total;
+        }
+
+    }
+    let maxCustomer = '';
+    let maxAmount = 0;
+
+    for(let cust in customerSpend){
+
+        if(customerSpend[cust] > maxAmount){
+            maxAmount = customerSpend[cust];
+            maxCustomer = cust;
+        }
+    }
+
+    console.log("Highest spender:", maxCustomer);
+</script>

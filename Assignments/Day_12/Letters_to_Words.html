@@ -1,0 +1,27 @@
+//convert array of letters to array of words
+
+<script>
+    const inputArr = [ 
+				'b', 'a', 'k', 'e', '',
+				'c', 'a', 'k', 'e', '',
+				'e', 'a', 't'
+				];
+    let result = [];
+    let temp = '';
+
+    for(let ch of inputArr){
+
+        if(ch!==''){
+            temp = temp+ch;
+        }else {
+            result.push(temp);
+            temp = '';
+        }
+    }
+
+    if(temp!=''){
+        result.push(temp)
+    }
+
+    console.log(result)
+</script>

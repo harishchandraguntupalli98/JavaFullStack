@@ -1,0 +1,22 @@
+//Get total earnings per doctor
+
+<script>
+    const appointments = [
+  { id: 1, doctor: "Dr. A", patient: "John", date: "2025-08-01", fee: 500 },
+  { id: 2, doctor: "Dr. B", patient: "Alice", date: "2025-08-03", fee: 700 },
+  { id: 3, doctor: "Dr. A", patient: "Mark", date: "2025-07-20", fee: 500 },
+  { id: 4, doctor: "Dr. C", patient: "John", date: "2025-08-05", fee: 600 }
+];
+ 
+ let earnings = {}
+
+ for(let app of appointments){
+
+    if(earnings[app.doctor]){
+        earnings[app.doctor] = earnings[app.doctor]+app.fee;
+    }else{
+        earnings[app.doctor] = app.fee;
+    }
+ }
+ console.log(earnings);
+</script>
