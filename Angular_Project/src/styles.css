@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.css';
+.carousel-img {
+    height: 270px;       /* control height */
+    object-fit: cover;   /* crop image nicely */
+  }
+.category-card {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+.category-card:hover {
+    transform: scale(1.05);
+  }
+  
+.category-img {
+    height: 120px;
+    object-fit: contain;
+    padding: 15px;
+  }
+  .product-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
