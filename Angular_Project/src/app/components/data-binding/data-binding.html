@@ -1,0 +1,111 @@
+<div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 1</h4>
+    <div>Have a paragraph and a toggle button; on clicking the button, control the visibility (Show / Hide) of the paragraph.
+    </div>
+
+    <h1 [hidden]="!flag">This is a Paragraph</h1>
+    <button (click)="flag=!flag">{{flag ? 'Hide' : 'Show'}}</button>
+
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 2</h4>
+    <div>Create a textarea with maxLength = 100; as the user keeps typing, count and display how many words and how many characters are typed and  remaining characters.
+    </div>
+    <textarea maxlength="100" [(ngModel)]="message"></textarea>
+    <div>Entered Sentence : {{message}}</div>
+    <div>Entered Message: {{message}}</div>
+    <div>Count of Words: {{!message ? 0 : message.split(' ').length}}</div>
+    <div>Count of Characters: {{message.length}}</div>
+    <div>Remaining Characters: {{100 - message.length}}</div>
+</div>
+
+
+<div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 3</h4>
+    <div>
+      Create a dropdown with state names; when the user changes the dropdown value, print the selected value in a div.
+    </div>
+    <select [(ngModel)]="selectedState">
+      <option value="">Select State</option>
+      <option>Texas</option>
+      <option>Kansas</option>
+      <option>California</option>
+      <option>Florida</option>
+      <option>New York</option>
+    </select>
+    <div>
+      Selected State: {{selectedState}}
+    </div>
+  </div>
+
+
+  <div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 9</h4>
+    <div>
+      Create a dropdown with colors and change the background color of a div based on selection.
+    </div>
+    <select [(ngModel)]="selectedColor">
+      <option value="">Select Color</option>
+      <option>Red</option>
+      <option>Green</option>
+      <option>Yellow</option>
+      <option>Blue</option>
+      <option>Orange</option>
+    </select>
+    <div class="mt-3 p-5 border border-2"
+      [style.background-color]="selectedColor">
+      Selected Color: {{selectedColor}}
+    </div>
+  </div>
+
+
+  <div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 4</h4>
+    <div>
+      Create an input box and toggle the type between text and password.
+    </div>
+
+    <input [type]="flag2 ? 'text' : 'password' "
+    [(ngModel)]="password"
+    placeholder="Enter Password">
+
+    <button (click)="flag2=!flag2">
+      {{flag2 ? 'Hide Password' : 'Show Password'}}
+    </button>
+  </div>
+
+  <div class="border border-3 rounded-3 p-3 m-3">
+      <h4>Assignment 5</h4>
+      <div>
+        Create a counter example with three controls: Increment, Decrement, and Reset.
+      </div>
+      <h4>Count : {{count}}</h4>
+      <button (click)="count=count+1">Increment</button>
+      <button (click)="count=count-1">Decrement</button>
+      <button (click)="count=0">Reset</button>
+  </div>
+
+
+  <div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 6</h4>
+    <div>
+      Create a temperature converter to convert Celsius to Fahrenheit.
+    </div>
+    <input type="number"
+    [(ngModel)]="celsius"
+    placeholder="Enter Number">
+    <div>Fahrenheit Value: {{(celsius * 9/5) + 32}}</div>
+  </div>
+  
+
+
+
+
+    
+
+  
+
+
+
+  
