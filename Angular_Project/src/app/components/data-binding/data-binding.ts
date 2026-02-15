@@ -16,4 +16,28 @@ export class DataBinding {
     selectedColor = "";
     count =0;
     celsius=0;
+    num1 = 0;
+    num2 = 0;
+    operator = '';
+    result = 0;
+
+    calculate() {
+
+      if(this.operator == '+') {
+        this.result = this.num1 + this.num2;
+      }
+    
+      else if(this.operator == '-') {
+        this.result = this.num1 - this.num2;
+      }
+    
+      else if(this.operator == '*') {
+        this.result = this.num1 * this.num2;
+      }
+    
+      else if(this.operator == '/') {
+        this.result = this.num1 / this.num2;
+      }
+    
+    }
 }

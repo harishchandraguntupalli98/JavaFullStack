@@ -97,15 +97,34 @@
     placeholder="Enter Number">
     <div>Fahrenheit Value: {{(celsius * 9/5) + 32}}</div>
   </div>
-  
 
+  <div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 8</h4>
+    <div>
+      Create two input boxes and a dropdown (+, -, *, /) and perform arithmetic operations based on the selected operator.
+    </div>
 
+    <input type="number"
+    {(ngModel)}="num1"
+    placeholder="Enter Input 1">
 
+    <input type="number"
+    {(ngModel)}="num2"
+    placeholder="Enter Input 2">
 
-    
+    <select [(ngModel)]="operator">
+      <option value="">Select from</option>
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+    </select>
 
-  
-
-
-
+    <button (click)="calculate()">
+      Calculate
+    </button>
+    <div>
+      Result: {{result}}
+    </div>
+  </div>
   
