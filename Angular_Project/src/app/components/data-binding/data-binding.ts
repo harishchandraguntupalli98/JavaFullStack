@@ -20,6 +20,7 @@ export class DataBinding {
     num2 = 0;
     operator = '';
     result = 0;
+    fontSize = 25;
 
     calculate() {
 

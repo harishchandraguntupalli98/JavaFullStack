@@ -2,10 +2,8 @@
     <h4>Assignment 1</h4>
     <div>Have a paragraph and a toggle button; on clicking the button, control the visibility (Show / Hide) of the paragraph.
     </div>
-
     <h1 [hidden]="!flag">This is a Paragraph</h1>
     <button (click)="flag=!flag">{{flag ? 'Hide' : 'Show'}}</button>
-
 </div>
 
 <div class="border border-3 rounded-3 p-3 m-3">
@@ -19,7 +17,6 @@
     <div>Count of Characters: {{message.length}}</div>
     <div>Remaining Characters: {{100 - message.length}}</div>
 </div>
-
 
 <div class="border border-3 rounded-3 p-3 m-3">
     <h4>Assignment 3</h4>
@@ -99,17 +96,17 @@
   </div>
 
   <div class="border border-3 rounded-3 p-3 m-3">
-    <h4>Assignment 8</h4>
+    <h4>Assignment 7</h4>
     <div>
       Create two input boxes and a dropdown (+, -, *, /) and perform arithmetic operations based on the selected operator.
     </div>
 
     <input type="number"
-    {(ngModel)}="num1"
+    [(ngModel)]="num1"
     placeholder="Enter Input 1">
 
     <input type="number"
-    {(ngModel)}="num2"
+    [(ngModel)]="num2"
     placeholder="Enter Input 2">
 
     <select [(ngModel)]="operator">
@@ -127,4 +124,27 @@
       Result: {{result}}
     </div>
   </div>
+
+  <div class="border border-3 rounded-3 p-3 m-3">
+    <h4>Assignment 8</h4>
+    <div>
+      ⁠Create a button that increases font size and another button that decreases font size for a paragraph.
+    </div>
+    <div [style.font-size.px]="fontSize">This is the paragraph</div>
+
+    <button (click)="fontSize = fontSize + 2">Increase Font Size</button>
+    <button (click)="fontSize = fontSize - 2">Decrease Font Size</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
   
