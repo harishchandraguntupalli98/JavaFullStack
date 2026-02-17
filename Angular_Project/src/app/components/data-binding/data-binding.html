@@ -64,9 +64,7 @@
     </div>
 
     <input [type]="flag2 ? 'text' : 'password' "
-    [(ngModel)]="password"
     placeholder="Enter Password">
-
     <button (click)="flag2=!flag2">
       {{flag2 ? 'Hide Password' : 'Show Password'}}
     </button>
@@ -90,8 +88,7 @@
       Create a temperature converter to convert Celsius to Fahrenheit.
     </div>
     <input type="number"
-    [(ngModel)]="celsius"
-    placeholder="Enter Number">
+    [(ngModel)]="celsius">
     <div>Fahrenheit Value: {{(celsius * 9/5) + 32}}</div>
   </div>
 
@@ -100,7 +97,6 @@
     <div>
       Create two input boxes and a dropdown (+, -, *, /) and perform arithmetic operations based on the selected operator.
     </div>
-
     <input type="number"
     [(ngModel)]="num1"
     placeholder="Enter Input 1">
@@ -131,7 +127,6 @@
       ⁠Create a button that increases font size and another button that decreases font size for a paragraph.
     </div>
     <div [style.font-size.px]="fontSize">This is the paragraph</div>
-
     <button (click)="fontSize = fontSize + 2">Increase Font Size</button>
     <button (click)="fontSize = fontSize - 2">Decrease Font Size</button>
   </div>

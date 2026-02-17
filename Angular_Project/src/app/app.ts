@@ -6,6 +6,7 @@ import { Footer } from './components/footer/footer';
 import { Categories } from './components/categories/categories';
 import { Carousel1 } from './components/carousel1/carousel1';
 import { DataBinding } from './components/data-binding/data-binding';
+import { DirectiveDemo } from './components/directive-demo/directive-demo';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { DataBinding } from './components/data-binding/data-binding';
     Footer,
     Categories,
     Carousel1,
-    DataBinding
+    DataBinding,
+    DirectiveDemo
   ],
 
   templateUrl: './app.html',
