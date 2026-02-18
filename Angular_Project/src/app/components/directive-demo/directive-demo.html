@@ -56,3 +56,84 @@
     </tbody>
   </table>
 </div>
+
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4>Assignment 1</h4>
+  <div>
+    <div>
+    Create an array of task objects, and display them using for,
+    Every Element Should have a checkbox, When a checkbox is clicked, toggle completion status(true/false)
+    for completed tasks show them as striked-out
+    add a dropdown with 3 values 'All','Completed','Pending' , based on the value selected, show the tasks
+    </div>
+    <div>Select Filter :  </div>
+    <select [(ngModel)]="selectedFilter">
+      <option>All</option>
+      <option>Completed</option>
+      <option>Pending</option>
+    </select>
+  </div>
+  <ul>
+    @for(task of tasks; track $index){
+      @if(
+        selectedFilter == 'All' ||
+        (selectedFilter == 'Completed' && task.completed) ||
+        (selectedFilter == 'Pending' && !task.completed)
+      ){
+        <li class="list-group-item">
+          <input type="checkbox"
+                 [(ngModel)]="task.completed">
+          <span
+            [style.text-decoration]="task.completed ? 'line-through' : 'none'">
+            {{task.title}}
+          </span>
+        </li>
+      }
+    }
+  </ul>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4>Assignment 2</h4>
+  <div>
+    <select [(ngModel)]="selectedCategory">
+      <option value="All">All</option>
+      <option value="men's clothing">Men's Clothing</option>
+      <option value="jewelery">Jewelery</option>
+      <option value="electronics">Electronics</option>
+      <option value=""></option>
+    </select>
+</div>
+<div class="row">
+  @for(product of products; track $index){
+    @if(
+      selectedCategory == 'All' ||
+      product.category == selectedCategory
+    ){
+      <div class="col-md-3 mb-3">
+        <div class="card">
+          <img [src]="product.image"
+               class="card-img-top"
+               style="height:150px; object-fit:contain;">
+          <div class="card">
+            <h6>{{product.title}}</h6>
+            <p>
+              ${{product.price}}
+            </p>
+            <p>
+              {{product.category}}
+            </p>
+          </div>
+        </div>
+      </div>
+    }
+  } @empty {
+    <h5>
+      No products found
+    </h5>
+  }
+</div>
+
+
+
