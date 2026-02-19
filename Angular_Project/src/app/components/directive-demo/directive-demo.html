@@ -137,7 +137,7 @@
 
 
 <div class="border border-3 rounded-3 p-3 m-3">
-  <h4 class="text-center mb-3">Assignment 3 - Cart Items</h4>
+  <h4 class="text-center mb-3">Assignment 3 </h4>
   <div class="row">
     @for(items of cartItems ; track $index){
       <div class="col-md-3 mb-3">
@@ -170,57 +170,6 @@
       Total Price : ${{getTotal()}}
     </h5>
   </div>
-</div>
-
-
-<div class="border border-3 rounded-3 p-3 m-3">
-  <h4>Assignment 4</h4>
-  <table class="table table-bordered text-center">
-    <thead class="table-dark">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Role</th>
-        <th>Salary</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for(emp of employees2; track $index){
-        <tr
-        [ngStyle]="{
-          'background-color' :
-          emp.role == 'Manager' ? 'lightyellow' :
-          emp.role == 'Developer' ? 'lightblue' :
-          emp.role == 'Tester' ? 'lightpink' : ''
-        }"
-        [ngClass]="{'inactive' : emp.status == 'Inactive'}" >
-        <td>{{emp.id}}</td>
-          <td
-          [ngClass]="{'managerStyle' : emp.role == 'Manager'}">
-            {{emp.name}}
-          </td>
-          <td>{{emp.role}}</td>
-          <td>
-            <span
-            [ngStyle]="{
-              'color' : emp.salary > 50000 ? 'green' : 'red'}">
-            {{emp.salary}}
-            </span>
-            <br>
-            <span class="badge"
-            [ngStyle]="{
-              'background-color' :
-              emp.salary > 70000 ? 'green' :
-              (emp.salary >= 40000 && emp.salary <=70000) ? 'orange' :'red'}">
-              {{emp.salary}}
-            </span>
-          </td>
-          <td>{{emp.status}}</td>
-        </tr>
-      }
-    </tbody>
-  </table>
 </div>
 
 
