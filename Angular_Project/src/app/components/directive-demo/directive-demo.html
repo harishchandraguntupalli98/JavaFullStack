@@ -15,7 +15,6 @@
     <div>{{num}} is Odd Number</div>
   }
 </div>
-
 <div class="border border-2 rounded-2 p-2 m-2">
   <div> switch case</div>
   @switch (num) {
@@ -57,15 +56,14 @@
   </table>
 </div>
 
-
 <div class="border border-3 rounded-3 p-3 m-3">
   <h4>Assignment 1</h4>
   <div>
     <div>
-    Create an array of task objects, and display them using for,
-    Every Element Should have a checkbox, When a checkbox is clicked, toggle completion status(true/false)
-    for completed tasks show them as striked-out
-    add a dropdown with 3 values 'All','Completed','Pending' , based on the value selected, show the tasks
+    Create an array of task objects, and display them using for
+   Every Element Should have a checkbox, When a checkbox is clicked, toggle completion status(true/false)
+   for completed tasks show them as striked-out
+   add a dropdown with 3 values 'All','Completed','Pending' , based on the value selected, show the tasks
     </div>
     <div>Select Filter :  </div>
     <select [(ngModel)]="selectedFilter">
@@ -74,7 +72,7 @@
       <option>Pending</option>
     </select>
   </div>
-  <ul>
+  <ul >
     @for(task of tasks; track $index){
       @if(
         selectedFilter == 'All' ||
@@ -102,7 +100,7 @@
       <option value="men's clothing">Men's Clothing</option>
       <option value="jewelery">Jewelery</option>
       <option value="electronics">Electronics</option>
-      <option value=""></option>
+      <option value="toys">Toys</option>
     </select>
 </div>
 <div class="row">
@@ -134,6 +132,97 @@
     </h5>
   }
 </div>
+</div>
+
+
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Assignment 3 - Cart Items</h4>
+  <div class="row">
+    @for(items of cartItems ; track $index){
+      <div class="col-md-3 mb-3">
+        <div class="card text-center p-3 shadow-sm">
+          <h6 class="fw-bold">{{items.name}}</h6>
+          <p >
+            Price : ${{items.price}}
+          </p>
+          <div>
+            <button 
+                    (click)="decrement(items)"> -
+            </button>
+            <span class="fw-bold">
+              {{items.qty}}
+            </span>
+            <button 
+                    (click)="increment(items)">+
+            </button>
+          </div>
+          <p >
+            Item Total :
+            ${{items.price * items.qty}}
+          </p>
+        </div>
+      </div>
+    }
+  </div>
+  <div >
+    <h5 >
+      Total Price : ${{getTotal()}}
+    </h5>
+  </div>
+</div>
+
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4>Assignment 4</h4>
+  <table class="table table-bordered text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Salary</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees2; track $index){
+        <tr
+        [ngStyle]="{
+          'background-color' :
+          emp.role == 'Manager' ? 'lightyellow' :
+          emp.role == 'Developer' ? 'lightblue' :
+          emp.role == 'Tester' ? 'lightpink' : ''
+        }"
+        [ngClass]="{'inactive' : emp.status == 'Inactive'}" >
+        <td>{{emp.id}}</td>
+          <td
+          [ngClass]="{'managerStyle' : emp.role == 'Manager'}">
+            {{emp.name}}
+          </td>
+          <td>{{emp.role}}</td>
+          <td>
+            <span
+            [ngStyle]="{
+              'color' : emp.salary > 50000 ? 'green' : 'red'}">
+            {{emp.salary}}
+            </span>
+            <br>
+            <span class="badge"
+            [ngStyle]="{
+              'background-color' :
+              emp.salary > 70000 ? 'green' :
+              (emp.salary >= 40000 && emp.salary <=70000) ? 'orange' :'red'}">
+              {{emp.salary}}
+            </span>
+          </td>
+          <td>{{emp.status}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
 
 
 
