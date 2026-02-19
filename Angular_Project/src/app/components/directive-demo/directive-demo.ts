@@ -41,15 +41,15 @@ export class DirectiveDemo {
 	  { id: 4, name: 'Power Bank', price: 1299, qty: 3 }
 	];
 
-  count : number= 0;
   increment(items :any){
 
     items.qty = items.qty+1;
   }
   decrement(items :any){
-    items.qty = items.qty-1;
+    if(items.qty > 0){
+      items.qty = items.qty - 1;
+    }
   }
-
   getTotal(){
     let total = 0;
     for(let item of this.cartItems){
