@@ -1,0 +1,21 @@
+<script>
+    let str1 = "listen";
+    let str2 = "silent";
+
+    if(str1.length!==str2.length){
+        console.log("Not an anagram");
+    }
+    else{
+            for(let ch of str1){
+        if(str2.indexOf(ch) === -1){
+            console.log("Not an anagram");
+            break;
+        }
+        str2 = str2.replace(ch,"");
+    }
+    if(str2.length === 0){
+        console.log("Anagram");
+    }
+}
+
+</script>

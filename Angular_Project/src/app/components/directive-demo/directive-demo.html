@@ -28,7 +28,6 @@
     @default {<h1>Not a valid number</h1>}
   }
 </div>
-
 <div class="border border-2 rounded-2 p-2 m-2">
   <div> car list :</div>
   <select [(ngModel)]="selectedCar">
@@ -72,7 +71,7 @@
       <option>Pending</option>
     </select>
   </div>
-  <ul >
+  <ul>
     @for(task of tasks; track $index){
       @if(
         selectedFilter == 'All' ||
@@ -135,18 +134,13 @@
 </div>
 
 
-
 <div class="border border-3 rounded-3 p-3 m-3">
-  <h4 class="text-center mb-3">Assignment 3 </h4>
+  <h4 class="text-center mb-3">Assignment 3</h4>
   <div>
-  3.Display Array of employees in a table
-   a. Display Salary in green  if salary > 50000, else Display Salary in red, using n/gStyle
-   b. Apply a CSS class "inactive" to employees whose status is "Inactive" using ngClass
-   c. Add bold font and blue color only for employees whose role is "Manager" using ngClass
-   d. Apply a different row background color based on employee role:
-		Manager = lightyellow , Developer = lightblue , Tester = lightpink
-   e. Show salary in a badge style with dynamic color
-      Green if salary > 70,000 , Orange if between 40,000 and 70,000, Red if less than 40,000
+    3.Maintain a cart array
+    Use for to display all cart items.
+    Show each item with quantity controls like plus and mius
+    Calculate and display the total price
     </div>
   <div class="row">
     @for(items of cartItems ; track $index){
@@ -181,6 +175,104 @@
     </h5>
   </div>
 </div>
+
+
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Practice1</h4>
+  <p>{{nbr}}</p>
+<div>
+    <button (click)="increment1()">+</button>
+    <button (click)="decrement1()">-</button>
+    <button (click)="reset1()">reset</button>
+  </div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Practice2</h4>
+  <select [(ngModel)]="selectedState1">
+    <option value="">select a state</option>
+    <option value="KS">Kansas</option>
+    <option value="MN">Minnesota</option>
+    <option value="TX">Texas</option>
+    <option value="MI">Missouri</option>
+  </select>
+  <div>selected state : {{selectedState1}}</div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Practice3</h4>
+  <select [(ngModel)]="selectedState1">
+    <option value="">select a state</option>
+   @for(state of states;track $index){
+     <option [value]="state">{{state}}</option>
+   }
+  </select>
+  <div>selected state : {{selectedState1}}</div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Practice4</h4>
+  <h6 [hidden]="flag3">This is a Paragraph</h6>
+  <button (click)="flag3=!flag3">{{flag3 ? 'Show' :'Hide'}}</button>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Practice5</h4>
+  <textarea maxlength="100" [(ngModel)]="message1"></textarea>
+  <div>Entered Message : {{message1}}</div>
+  <div>Number of Words : {{!message1 ? 0 : message1.split(' ').length}}</div>
+  <div>Number of characters : {{message1.length}}</div>
+  <div>Remaining length : {{100 - message1.length}}</div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Practice6</h4>
+  <div>
+    <select [(ngModel)]="selectedFilter1">
+      <option>All</option>
+      <option>Completed</option>
+      <option>Pending</option>
+    </select>
+  </div>
+  <div>
+      <h5>Tasks</h5>
+      @for(task of tasksNew ; track $index){
+
+        @if(selectedFilter1=='All' || selectedFilter1 == 'Completed' && task.completed
+        || selectedFilter1 == 'Pending' && !task.completed){
+<!-- 
+      <h6>{{task.title}} {{task.completed}}</h6> -->
+      <div>
+        <input type="checkbox" [(ngModel)]="task.completed">
+        <span [style.text-decoration]="task.completed ? 'line-through' : 'none'">{{task.title}}</span>
+      </div>
+    }
+      }
+  </div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4 class="text-center mb-3">Practice7</h4>
+  <div>
+    <table class="table table-bordered table-striped">
+      <tbody>
+    @for(emp of employeesNew ; track $index){
+        <tr>
+          <td>{{emp.eId}}</td>
+          <td>{{emp.name}}</td>
+          <td [ngStyle]="{'background-color':emp.sal>6000 ? 'green' : 'red'}">{{emp.sal}}</td>
+        </tr>
+    }
+  </tbody>
+  </table>
+  </div>
+  <div>
+</div>
+
+
+
+
 
 
 

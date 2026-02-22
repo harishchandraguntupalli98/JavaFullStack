@@ -58,6 +58,37 @@ export class DirectiveDemo {
     return total;
   }
 
+  nbr :number = 0;
+
+  increment1(){
+
+    this.nbr = this.nbr+1;
+  }
+  decrement1(){
+    this.nbr = this.nbr-1;
+  }
+  reset1(){
+    this.nbr = 0;
+  }
+
+  states = ["Kansas", "Minnesota", "Texas", "Missouri"];
+  selectedState1 : String = "";
+  flag3 = false;
+  message1 = "";
+
+  tasksNew = [
+    { id: 1, title: 'Learn Angular', completed: false },
+    { id: 2, title: 'Build Project', completed: true }
+  ];
+
+  selectedFilter1 ="";
+
+  employeesNew = [
+    { eId: 101, name: 'Sanjay', sal: 5000 },
+    { eId: 102, name: 'Geeta', sal: 8000 }
+  ];
+
+
    
 }
 

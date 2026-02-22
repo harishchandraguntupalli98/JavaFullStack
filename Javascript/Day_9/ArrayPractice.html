@@ -1,0 +1,61 @@
+<script>
+     let cars = ['Tata', 'Honda', 'Maruti', 'Toyota']
+
+// 1. loop
+for (i = 0; i < cars.length; i++) {
+    console.log(cars[i]);
+}
+console.log('==========')
+
+// 2.for-in
+for (ind in cars) {
+    console.log(cars[i]);
+}
+console.log('==========')
+
+// 3. for-of
+for (car of cars) {
+    console.log(car);
+}
+console.log('==========')
+
+// 4. forEach()
+cars.forEach((val, ind, arr) => {
+    console.log(val, ind, arr);
+})
+
+
+let employees = [
+        { "eId": 101, "name": "sanjay", "sal": 5000, "gender": "male" },
+        { "eId": 104, "name": "geeta", "sal": 8000, "gender": "female" },
+        { "eId": 103, "name": "sameer", "sal": 7000, "gender": "male" },
+        { "eId": 102, "name": "sita", "sal": 9000, "gender": "female" },
+        { "eId": 105, "name": "deepak", "sal": 8000, "gender": "male" }
+    ];
+let femaleEmp = employees.find((emp)=> emp.gender==='female')
+console.log(femaleEmp);
+
+let allFemaleEmp = employees.filter((emp)=> emp.gender=='female')
+console.log(allFemaleEmp);
+
+const employees1 = [
+        { id: 1, firstName: "Rahul", lastName: "Sharma", age: 28, sal: 45000 },
+        { id: 2, firstName: "Priya", lastName: "Verma", age: 32, sal: 52000 },
+        { id: 3, firstName: "Amit", lastName: "Kumar", age: 26, sal: 38000 },
+        { id: 4, firstName: "Neha", lastName: "Patel", age: 35, sal: 61000 },
+        { id: 5, firstName: "Suresh", lastName: "Reddy", age: 41, sal: 75000 }
+    ];
+
+employees1.map((emp)=>{emp.fullname = emp.firstName+" "+emp.lastName;
+    return emp;
+     });
+console.log(employees1);
+
+
+let arr1 = [10,20,30,40]
+
+let res = arr1.reduce((acc,curr)=>{
+   return acc+curr;
+},0);
+console.log(res);
+</script>

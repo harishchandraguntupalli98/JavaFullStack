@@ -1,0 +1,64 @@
+<script>
+    let str = "Hello";
+    console.log(str.length);
+    let res = ""
+
+    for(let s of str){
+        res = s+res;
+    }
+    console.log(res);
+
+    let str2 = "javascript";
+    console.log(str2);
+    let count = 0;
+
+    for(s2 of str2){
+
+        if(s2=='a'||s2=='e'||s2=='i'||s2=='o'||s2=='u'){
+            count++;
+        }
+    }
+    console.log(count);
+
+    let str3 = "javascriiiipt";
+    let vowels = "aeiou";
+    console.log(str3);
+    let count1 = 0;
+
+    for(s2 of str3){
+
+        if(vowels.includes(s2)){
+            count1++;
+        }
+    }
+    console.log(count1);
+
+
+    let pal = "madam1"
+    let lap = "";
+    for(p of pal){
+        lap = p+lap;
+    }
+    if(pal===lap){
+        console.log(`${pal} is palindrome`);
+    }
+
+    let pal1 = "racecaar";
+    let isPalindrome = true;
+    let left = 0;
+    let right = pal1.length;
+    while(left<right){
+        if(str[left]!=str[right]){
+            isPalindrome=false;
+            break;
+        }
+        left++;
+        right--;
+    }
+    if(isPalindrome){
+        console.log(`${pal1} is palindrome`)
+    }else{
+        console.log(`${pal1} is not palindrome`)
+
+    }
+    </script>

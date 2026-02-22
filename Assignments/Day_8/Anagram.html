@@ -2,20 +2,20 @@
     let str1 = "listen";
     let str2 = "silent";
 
-    if (str1.length === str2.length) {
+    if(str1.length===str2.length){
+    for(char of  str1){
 
-    for (let char of str1) {
-
-        if (str2.indexOf(char) === -1) {
-            console.log("Not Anagram");
+        if(str2.indexOf(char)===-1){
+            console.log("not an anagram");
             break;
         }
 
-        str2 = str2.replace(char, "");
-    }
+        str2 = str2.replace(char,"");
 
-    if (str2.length === 0) {
-        console.log("Anagram");
+    }
+    if(str2.length===0){
+        console.log("anagram")
     }
 }
+
 </script>
