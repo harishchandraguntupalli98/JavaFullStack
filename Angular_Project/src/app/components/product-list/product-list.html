@@ -1,4 +1,6 @@
 <h3 class="text-center">Product List</h3>
+<button class="btn btn-primary" (click)="openAlert()">Sweet Alert</button>
+<button class="btn btn-primary" (click)="openSnackbar()">Snack Bar</button>
 
 <div class="container">
   <div class="row">
@@ -9,23 +11,40 @@
         }
       </select>
     </div>
+    <div class="col-sm-4">
+      <input class="form-control"  appDisablePaste appTextonly type="search" placeholder="Search" [(ngModel)]="searchText">
+      <!-- input is the host element for appTextonly directive -->
+      <button (click)="searchProduct()">Search</button>
+    </div>
+    <div class="col-sm-6">
+      <button (click)="sortAsc()">Sort Asc</button>
+      <button (click)="sortDesc()">Sort Desc</button>
+      <button (click)="reset()">Reset</button>
+    </div>
   </div>
   <div class="row mt-2">
-    @for (product of productArr; track $index) {
+    @for (product of productArr | paginate: { itemsPerPage: 4, currentPage: p }; track $index)  {
     <div class="col-sm-3">
-      <div class="card">
+      <div class="card" appZoomin >
         <img src="{{product.image}}" class="card-img-top" alt="..." height="200">
-        <div class="card-body text-center">
+        <div class="card-body text-center" >
           <h5 class="card-title">{{product.category}}</h5>
           <p class="card-text">{{product.id}}</p>
           <p class="card-text text-truncate">{{product.title}}</p>
           <p class="card-text text-truncate">{{product.description}}</p>
-          <p class="card-text">{{product.price}}</p>
+          <p class="card-text">{{product.rating.rate}}
+            <fa-icon [icon]="faStar"></fa-icon>
+          </p>
         </div>
       </div>
     </div>
     }@empty {
       <div>No Products Found</div>
     }
+    <div class="row mt-1">
+      <div class="col-sm-4 offset-3">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
   </div>
 </div>
