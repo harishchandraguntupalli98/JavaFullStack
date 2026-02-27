@@ -15,9 +15,7 @@ export class RomanPipe implements PipeTransform {
       case 6 : return 'VI';break;
       default : return 'Not valid';break;
     }
-
-
-   
   }
+   
 
 }

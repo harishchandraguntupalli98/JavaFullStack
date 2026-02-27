@@ -107,3 +107,19 @@
 </table>
 </div>
 </div>
+
+<div>
+    <div>Pure & Impure Arr</div>
+
+    @for(item of arr | mysort ; track $index){
+        <b>{{item}} &nbsp;</b>
+
+    }
+</div>
+
+<div>
+    <div>
+        <input type="number" #newNum />
+        <button (click)="arr.push(newNum.value)">Arr</button>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<p>parent works!</p>
+<div class="row border border-2 text-center p-2">
+    <div>This is parent component</div>
+    <div>My own data is {{a}}</div>
+    <div>Child2 data is {{child2.userName}}</div>
+    <div class="col-sm-6 border border-2 p-2">
+        <app-child1 [a] ='a'
+                    [userName]="child2.userName">
+        </app-child1>
+    </div>
+    <div class="col-sm-6 border border-2 p-2">
+        <app-child2 [a] ='a' #child2></app-child2>
+    </div>
+</div>

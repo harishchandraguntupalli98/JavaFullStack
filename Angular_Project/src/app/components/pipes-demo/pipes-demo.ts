@@ -7,10 +7,11 @@ import { RomanPipe } from '../../custom-pipes/roman-pipe';
 import { AgePipe } from '../../custom-pipes/age-pipe';
 import { SalutationPipe } from '../../custom-pipes/salutation-pipe';
 import { EmployeeFilterPipe } from '../../custom-pipes/employee-filter-pipe';
+import { MysortPipe } from '../../custom-pipes/mysort-pipe';
 
 @Component({
   selector: 'app-pipes-demo',
-  imports: [CommonModule,FormsModule,RemainingPipe,OrdinalPipe,RomanPipe,AgePipe,SalutationPipe,EmployeeFilterPipe],
+  imports: [CommonModule,FormsModule,RemainingPipe,OrdinalPipe,RomanPipe,AgePipe,SalutationPipe,EmployeeFilterPipe,MysortPipe],
   templateUrl: './pipes-demo.html',
   styleUrl: './pipes-demo.css',
 })
@@ -39,6 +40,10 @@ export class PipesDemo {
     { id: 5, name: 'Karan Singh', role: 'Manager', salary: 52000, status: 'Active', gender: 'male' },
     { id: 6, name: 'Neha Gupta', role: 'Tester', salary: 72000, status: 'Active', gender: 'female' }
   ];
+
+  arr :any = [20,50,40,30,10];
+
+
 
   
 
