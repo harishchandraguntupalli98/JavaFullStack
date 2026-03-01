@@ -6,12 +6,13 @@ import { DirectiveDemo } from '../directive-demo/directive-demo';
 import { EmployeeCrud } from '../employee-crud/employee-crud';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { Parent } from '../parent/parent';
+import { EmployeesCrud } from '../employees-crud/employees-crud';
 
 
 @Component({
   selector: 'app-body',
   imports: [
-    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent],
+    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })

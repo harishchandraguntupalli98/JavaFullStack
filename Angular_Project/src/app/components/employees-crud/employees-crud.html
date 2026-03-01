@@ -1,0 +1,5 @@
+<!-- <p>employees-crud works!</p> -->
+<app-employee-table [employees]="employees" (eventEmitterObj)="receiveId($event)" >
+</app-employee-table>
+<app-employee-add (eventEmitterObj)="receiveNewEmpData($event)">
+</app-employee-add>

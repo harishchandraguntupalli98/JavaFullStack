@@ -21,5 +21,4 @@ export class Categories {
     { label: 'Beauty & Toys', img_url: 'https://rukminim2.flixcart.com/flap/72/72/image/dff3f7adcf3a90c6.png?q=100' },
     { label: 'Two Wheeler', img_url: 'https://rukminim2.flixcart.com/fk-p-flap/72/72/image/05d708653beff580.png?q=100' },
   ];
-
 }
