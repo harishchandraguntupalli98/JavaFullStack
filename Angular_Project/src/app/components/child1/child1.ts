@@ -5,11 +5,12 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './child1.html',
   styleUrl: './child1.css',
-  inputs:['a','userName']
+  inputs:['a','userName','user']
 })
 export class Child1 {
   a :any;
   userName:any;
+  user :any;
 
   num : any = 0;
 

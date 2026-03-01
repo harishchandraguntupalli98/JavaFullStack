@@ -27,6 +27,13 @@ export class Parent implements OnChanges{
   receiveData(userRole: string) {
     this.parentUserRole = userRole;
   }
+
+  user : any={
+      name : "pavan",
+      skills : "Angular"
+  };
+
+
   ngOnInit() {
     console.log('Parent ngOnInit');
   }
