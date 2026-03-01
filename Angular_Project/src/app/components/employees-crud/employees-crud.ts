@@ -1,4 +1,4 @@
-import { Component ,EventEmitter} from '@angular/core';
+import { Component} from '@angular/core';
 import { EmployeeTable } from '../employee-table/employee-table';
 import Swal from 'sweetalert2';
 import { EmployeeAdd } from '../employee-add/employee-add';
@@ -36,5 +36,4 @@ export class EmployeesCrud {
     addEmp.id = this.employees.length+1;
     this.employees.push(addEmp);
   }
- // eventEmitterObj = new EventEmitter();
 }
