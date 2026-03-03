@@ -1,0 +1,12 @@
+{
+    "employees": [
+      {
+        "id": "1",
+        "firstName": "Virat",
+        "lastName": "Kohli",
+        "gender": "male",
+        "sal": 5000,
+        "email": "virat@gmail.com"
+      }
+    ]
+  }

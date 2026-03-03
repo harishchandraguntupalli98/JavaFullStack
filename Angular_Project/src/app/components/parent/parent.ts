@@ -1,45 +1,54 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, OnChanges, ViewChild, viewChild } from '@angular/core';
 import { Child1 } from '../child1/child1';
 import { Child2 } from '../child2/child2';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { Demo1 } from '../demo1/demo1';
+import { Demo2 } from '../demo2/demo2';
 
 @Component({
   selector: 'app-parent',
-  imports: [Child1,Child2],
+  imports: [Child1,Child2,FormsModule,Demo1,Demo2],
   templateUrl: './parent.html',
   styleUrl: './parent.css',
   inputs:['a']
       
 })
-export class Parent implements OnChanges{
+export class Parent {
   a:any ;
 
   num : any ;
+  flag : any = true;
   //httpClient = new HttpClient(); //though its valid  its not recommended
 
-  constructor(private httpClient : HttpClient) {//depedency injection
-    console.log("Parent constructor")
-    this.a= 10;    
-    this.num = 0;
-  }
-
+  
   parentUserRole :String = ''
   receiveData(userRole: string) {
     this.parentUserRole = userRole;
   }
 
-  user : any={
-      name : "pavan",
-      skills : "Angular"
+  user:any = {
+      name : "Hari",
+      skills : ["Angular"]
   };
 
+  @ViewChild('myInputBox') myInputBox :any;
 
-  ngOnInit() {
-    console.log('Parent ngOnInit');
+  constructor(private httpClient : HttpClient) {//depedency injection
+    console.log("Parent constructor")
+    console.log(this.myInputBox);
+    this.a= 10;    
+    this.num = 0;
   }
-  ngOnChanges() {
-    console.log('Parent ngOnChanges');
-  }
+
+
+
+  // ngOnInit() {
+  //   console.log('Parent ngOnInit');
+  // }
+  // ngOnChanges() {
+  //   console.log('Parent ngOnChanges');
+  // }
   // ngDoCheck() {
   //   console.log('Parent ngDoCheck');
   // }
@@ -51,6 +60,9 @@ export class Parent implements OnChanges{
   // }
   // ngAfterViewInit() {
   //   console.log('Parent ngAfterViewInit');
+  //   console.log(this.myInputBox);
+  //   this.myInputBox.nativeElement.focus();
+  //   this.myInputBox.nativeElement.style.backgroundColor='red';
   // }
   // ngAfterViewChecked() {
   //   console.log('Parent ngAfterViewChecked');

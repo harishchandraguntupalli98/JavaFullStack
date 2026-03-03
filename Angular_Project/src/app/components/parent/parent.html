@@ -1,9 +1,20 @@
 <p>parent works!</p>
 <div class="row border border-2 text-center p-2">
     <div>This is parent component</div>
-    <div>My own data is {{a}}</div>
+    <div>My own data is {{a}}
+    <input type="number" [(ngModel)]="a" #myInputBox></div>
     <div>Child2 data is {{child2.userName}}</div>
     <div>Parent UserRole is {{parentUserRole}}</div>
+    <div>Name :{{user.name}}</div>
+    <div>Skills :{{user.skills}}</div>
+    <button (click)="user.skills.push('SQL')" >Add skills to User</button>
+
+    @if(flag){
+        <app-demo1></app-demo1>
+      }@else {
+        <app-demo2></app-demo2>
+      }
+    <button (click)="flag=!flag">Toggle flag</button>
     <div class="col-sm-6 border border-2 p-2">
         <app-child1 [a] ='a'
                     [userName]="child2.userName"

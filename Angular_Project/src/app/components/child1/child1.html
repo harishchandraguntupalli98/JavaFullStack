@@ -1,4 +1,8 @@
 <p>child1 works!</p>
 <div>My parents data a  is {{a}}</div>
 <div>My Siblings Data is {{userName}}</div>
-<div>{{user.name}}</div>
+<div>Name : {{user.name}}</div>
+<div>Skills</div>
+@for(skill of user.skills; track $index){
+    <b>{{skill}}</b>
+}

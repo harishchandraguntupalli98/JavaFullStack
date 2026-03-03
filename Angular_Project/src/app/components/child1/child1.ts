@@ -20,11 +20,12 @@ export class Child1 {
   // ngOnInit() {
   //   console.log('Child ngOnInit');
   // }
-  ngOnChanges() {
-    console.log('Child ngOnChanges');
-  }
+  // ngOnChanges() {
+  //   console.log('Child ngOnChanges');
+  // }
   // ngDoCheck() {
   //   console.log('Child ngDoCheck');
+  //   console.log(this.user);
   // }
   // ngAfterContentInit() {
   //   console.log('Child ngAfterContentInit');

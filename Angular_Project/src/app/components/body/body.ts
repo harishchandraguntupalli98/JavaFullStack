@@ -7,12 +7,13 @@ import { EmployeeCrud } from '../employee-crud/employee-crud';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { Parent } from '../parent/parent';
 import { EmployeesCrud } from '../employees-crud/employees-crud';
+import { Employeecomp } from '../employeecomp/employeecomp';
 
 
 @Component({
   selector: 'app-body',
   imports: [
-    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud],
+    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud,Employeecomp],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
