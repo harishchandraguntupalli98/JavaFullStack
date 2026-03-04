@@ -8,12 +8,14 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { Parent } from '../parent/parent';
 import { EmployeesCrud } from '../employees-crud/employees-crud';
 import { Employeecomp } from '../employeecomp/employeecomp';
+import { UserList } from '../user-list/user-list';
+import { NewuserList } from '../newuser-list/newuser-list';
 
 
 @Component({
   selector: 'app-body',
   imports: [
-    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud,Employeecomp],
+    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud,Employeecomp,UserList,NewuserList],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
