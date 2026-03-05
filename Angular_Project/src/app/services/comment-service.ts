@@ -14,9 +14,7 @@ export class CommentService {
   gerAllComments():Observable<CommentModel[]>{
 
     return this.httpClient.get<CommentModel[]>(this.apiUrl);
-
   }
-  
 }
 
 
