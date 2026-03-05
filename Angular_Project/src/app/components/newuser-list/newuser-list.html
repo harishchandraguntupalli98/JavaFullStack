@@ -4,7 +4,9 @@
     (click)="loadUserData()">Fetch User Data</button>
 </div>
 @if(isLoading() ){
-    <h1>Loading...</h1>
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
 }@else{
     <div>
         <table class="table table-bordered text-center">
@@ -48,7 +50,11 @@
             <input type="text" name="phone"placeholder="Phone" [(ngModel)]="newEmployee.phone">
             <input type="email" name="email"placeholder="Email" [(ngModel)]="newEmployee.email">
         </form>
+            @if(!isEditMode()){
             <button (click)="AddDataToTable()">Add</button>
+            }@else{
+            <button (click)="updateUser()">Update</button>
+            }
         </div>
         </div>
 }

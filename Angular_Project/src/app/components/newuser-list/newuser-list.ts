@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class NewuserList {
 
   isLoading = signal(false);
+  isEditMode = signal(false);
 
   newUserArr:any = signal([]);
   newEmployee: any = {
@@ -38,6 +39,8 @@ export class NewuserList {
        this.user.getUser().subscribe((response :any)=>{
       this.newUserArr.set(response);
       this.isLoading.set(false);
+      console.log(this.isLoading);
+      console.log("message");
     });
   }
 
@@ -66,6 +69,7 @@ export class NewuserList {
 
   editUser(user:any){
     this.newEmployee = user;
+    this.isEditMode.set(true);
   }
   updateUser(){
 
@@ -73,6 +77,7 @@ export class NewuserList {
     .subscribe(()=>{
       //this.displayUsers();
       this.loadUserData();
+      this.isEditMode.set(false);
     });
   }
 }
