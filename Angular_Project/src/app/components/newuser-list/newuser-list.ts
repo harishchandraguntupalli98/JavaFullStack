@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewuserList {
 
+  isLoading = signal(false);
+
   newUserArr:any = signal([]);
   newEmployee: any = {
     name: '',
@@ -27,19 +29,50 @@ export class NewuserList {
   constructor(private user : Users){
   }
   ngOnInit(){
-    this.displayUsers();
+    //this.displayUsers();
   }
 
-  displayUsers(){
-    this.user.getUser().subscribe((response :any)=>{
+  loadUserData(){
+    this.isLoading.set(true);
+    //this.displayUsers();
+       this.user.getUser().subscribe((response :any)=>{
       this.newUserArr.set(response);
+      this.isLoading.set(false);
     });
   }
+
+  // displayUsers(){
+  //   this.user.getUser().subscribe((response :any)=>{
+  //     this.newUserArr.set(response);
+  //     this.isLoading.set(false);
+  //   });
+  // }
 
   AddDataToTable(){
     console.log(this.newEmployee);
     this.user.addUser(this.newEmployee).subscribe((response :any)=>{
-        this.displayUsers();
+        //this.displayUsers();
+        this.loadUserData();
+    });
+  }
+
+  deleteUser(id : any){
+
+    this.user.deleteUser(id).subscribe((response :any)=>{
+       //this.displayUsers();
+      this.loadUserData();
+    })
+  }
+
+  editUser(user:any){
+    this.newEmployee = user;
+  }
+  updateUser(){
+
+    this.user.updateEmployee(this.newEmployee.id,this.newEmployee)
+    .subscribe(()=>{
+      //this.displayUsers();
+      this.loadUserData();
     });
   }
 }

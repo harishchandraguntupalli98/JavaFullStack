@@ -17,6 +17,14 @@ export class Users {
   addUser(empObj :any){
     return this.httpClient.post(this.newUser_api,empObj);
   }
+
+  deleteUser(id : any){
+    return this.httpClient.delete(this.newUser_api+'/'+id);
+  }
+
+  updateEmployee(id:any, emp:any){
+    return this.httpClient.put(this.newUser_api + "/" + id, emp);
+  }
 }
 
 

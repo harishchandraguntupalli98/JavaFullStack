@@ -7,6 +7,14 @@
         "gender": "male",
         "sal": 5000,
         "email": "virat@gmail.com"
+      },
+      {
+        "id": "2",
+        "firstName": "Sachin",
+        "lastName": "Tendulkar",
+        "gender": "male",
+        "sal": 7500,
+        "email": "sachin@gmail.com"
       }
     ]
   }
