@@ -12,12 +12,14 @@ import { UserList } from '../user-list/user-list';
 import { NewuserList } from '../newuser-list/newuser-list';
 import { CommentList } from '../comment-list/comment-list';
 import { EmployeeList } from '../employee-list/employee-list';
+import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
+import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 
 
 @Component({
   selector: 'app-body',
   imports: [
-    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud,Employeecomp,UserList,CommentList,EmployeeList,NewuserList],
+    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud,Employeecomp,UserList,CommentList,EmployeeList,NewuserList,ObservableDemo1,ObservableDemo2],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
