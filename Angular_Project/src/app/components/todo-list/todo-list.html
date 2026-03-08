@@ -1,0 +1,14 @@
+<p>todo-list works!</p>
+<div class="container">
+    <h3>Todo List</h3>
+    <ul>
+      @for(todo of todos$ | async;track $index){
+        <li>
+        {{todo.value}}
+        <button (click)="deleteTodo(todo.id)">
+          Delete
+        </button>
+    </li>
+    }
+</ul>
+</div>

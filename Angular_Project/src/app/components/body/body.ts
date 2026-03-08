@@ -14,12 +14,28 @@ import { CommentList } from '../comment-list/comment-list';
 import { EmployeeList } from '../employee-list/employee-list';
 import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
-
+import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
+import { TodoAddComponent } from '../todo-add/todo-add';
+import { TodoListComponent } from '../todo-list/todo-list';
+import { EmployeesAdd } from '../employees-add/employees-add';
+import { EmployeesClear } from '../employees-clear/employees-clear';
 
 @Component({
   selector: 'app-body',
   imports: [
-    ProductList,DirectiveDemo,EmployeeCrud,PipesDemo,Parent,EmployeesCrud,Employeecomp,UserList,CommentList,EmployeeList,NewuserList,ObservableDemo1,ObservableDemo2],
+    ProductList,
+    DirectiveDemo,
+    EmployeeCrud,PipesDemo,
+    Parent,
+    EmployeesCrud,
+    Employeecomp,
+    UserList,
+    CommentList,
+    EmployeeList,
+    NewuserList,
+    ObservableDemo1,
+    ObservableDemo2,
+    SubjectDemo1,TodoAddComponent,TodoListComponent,EmployeesAdd,EmployeesClear],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })

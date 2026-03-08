@@ -51,5 +51,4 @@ export class ObservableDemo2 {
       error: (err) => console.error('Error:', err),
     })
   }
-
 }
