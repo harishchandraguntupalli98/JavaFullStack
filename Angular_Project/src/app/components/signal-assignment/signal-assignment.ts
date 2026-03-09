@@ -13,7 +13,6 @@ export class SignalAssignment {
     { id: 2, value: 'Practice SQL Queries', isCompleted: true },
     { id: 3, value: 'Prepare for Interview', isCompleted: false }
   ]);
-
   nextId = 4;
   completedToDos = computed(() =>
     this.todos().filter(todo => todo.isCompleted)
