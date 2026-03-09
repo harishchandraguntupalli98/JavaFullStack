@@ -44,6 +44,6 @@ export class SignalAssignment {
       value: input,
       isCompleted: false
     };
-    this.todos.set([...this.todos(), newTodo});
+    this.todos.set([...this.todos(), newTodo]);
   }
 }
