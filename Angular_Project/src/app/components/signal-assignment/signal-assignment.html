@@ -1,0 +1,34 @@
+<p>signal-assignment works!</p>
+
+<div>
+    <table class="table table-bordered text-center">
+        <thead>
+            <th>ID</th>
+            <th>Todo</th>
+            <th>Status</th>
+            <th>Toggle</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            @for(todo of todos();track $index){
+                <tr>
+                    <td>{{todo.id}}</td>
+                    <td>{{todo.value}}</td>
+                    <td>@if(todo.isCompleted){Completed}
+                        @else{Pending}
+                    </td>
+                    <td>
+                        <button (click)="toggleTodo(todo.id)">Toggle</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteTodo(todo.id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+<input #todoInput placeholder="Enter Todo">
+<button (click)="addTodo(todoInput.value)">
+Add Todo
+</button>
+</div>

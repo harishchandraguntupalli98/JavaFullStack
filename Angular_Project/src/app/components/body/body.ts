@@ -19,6 +19,9 @@ import { TodoAddComponent } from '../todo-add/todo-add';
 import { TodoListComponent } from '../todo-list/todo-list';
 import { EmployeesAdd } from '../employees-add/employees-add';
 import { EmployeesClear } from '../employees-clear/employees-clear';
+import { SignalDemo1 } from '../signal-demo1/signal-demo1';
+import { SignalDemo2 } from '../signal-demo2/signal-demo2';
+import { SignalAssignment } from '../signal-assignment/signal-assignment';
 
 @Component({
   selector: 'app-body',
@@ -35,7 +38,7 @@ import { EmployeesClear } from '../employees-clear/employees-clear';
     NewuserList,
     ObservableDemo1,
     ObservableDemo2,
-    SubjectDemo1,TodoAddComponent,TodoListComponent,EmployeesAdd,EmployeesClear],
+    SubjectDemo1,TodoAddComponent,TodoListComponent,EmployeesAdd,EmployeesClear,SignalDemo1,SignalDemo2,SignalAssignment],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })

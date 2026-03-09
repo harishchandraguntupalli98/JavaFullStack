@@ -28,7 +28,7 @@ export class TodoService {
       if (todo.id === id) {
         this.todoArr.splice(ind, 1);
       }
-      this.todoSubject.next([...this.todoArr]);
     });
+    this.todoSubject.next([...this.todoArr]);
   }
 }
