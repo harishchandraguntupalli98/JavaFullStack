@@ -25,6 +25,9 @@ import { SignalAssignment } from '../signal-assignment/signal-assignment';
 import { FormDemo1 } from '../form-demo1/form-demo1';
 import { TemplateForm } from '../template-form/template-form';
 import { RegistrationForm } from '../registration-form/registration-form';
+import { ModelDriverForm } from '../model-driver-form/model-driver-form';
+import { DynamicForm } from '../dynamic-form/dynamic-form';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-body',
@@ -41,7 +44,7 @@ import { RegistrationForm } from '../registration-form/registration-form';
     NewuserList,
     ObservableDemo1,
     ObservableDemo2,
-    SubjectDemo1,TodoAddComponent,TodoListComponent,EmployeesAdd,EmployeesClear,SignalDemo1,SignalDemo2,SignalAssignment,FormDemo1,TemplateForm,RegistrationForm],
+    SubjectDemo1,TodoAddComponent,TodoListComponent,EmployeesAdd,EmployeesClear,SignalDemo1,SignalDemo2,SignalAssignment,FormDemo1,TemplateForm,RegistrationForm,ModelDriverForm,DynamicForm,RouterOutlet],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
