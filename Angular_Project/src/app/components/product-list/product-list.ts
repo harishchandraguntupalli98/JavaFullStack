@@ -10,10 +10,11 @@ import Snackbar from 'awesome-snackbar';
 import { Textonly } from '../../custom-directives/textonly';
 import { Disablepaste } from '../../custom-directives/disablepaste';
 import { Zoomin } from '../../custom-directives/zoomin';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [FontAwesomeModule,NgxPaginationModule,FormsModule,Textonly,Disablepaste,Zoomin],
+  imports: [FontAwesomeModule,NgxPaginationModule,FormsModule,Textonly,Disablepaste,Zoomin,RouterLink],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })

@@ -5,16 +5,33 @@ import { Careers } from './components/careers/careers';
 import { Contactus } from './components/contactus/contactus';
 import { Notfound } from './components/notfound/notfound';
 import { ProductList } from './components/product-list/product-list';
-import { Users } from './services/users';
 import { UserList } from './components/user-list/user-list';
+import { Userdetails } from './components/userdetails/userdetails';
+import { ProductDetails } from './components/product-details/product-details';
+import { PermanentJobs } from './components/permanent-jobs/permanent-jobs';
+import { ContractJobs } from './components/contract-jobs/contract-jobs';
+import { UploadVideos } from './components/upload-videos/upload-videos';
+import { trainerGuard } from './guards/trainer-guard';
 
 export const routes: Routes = [
     { path: 'home', component: Home },
     { path: 'aboutus', component: Aboutus },
-    { path: 'careers', component: Careers },
+    {
+      path: 'careers',
+      component: Careers,
+      children: [
+        { path: 'permanent', component: PermanentJobs },
+        { path: 'contract', component: ContractJobs },
+      ]
+    },
     { path: 'contactus', component:Contactus },
     { path: 'products', component:ProductList },
+    { path: 'productdetails', component:ProductDetails },
     { path: 'users', component:UserList },
+    { path: 'upload',
+       component:UploadVideos,
+       canActivate: [trainerGuard] },
+    { path: 'userdetails/:id', component: Userdetails },
     { path: '', component:Home },
     { path: '**', component: Notfound },
   ];
