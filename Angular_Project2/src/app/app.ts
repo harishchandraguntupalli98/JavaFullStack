@@ -1,10 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaterialDemo } from './components/material-demo/material-demo';
+import { Counter } from './components/counter/counter';
+import { Todocrud } from './components/todocrud/todocrud';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,MaterialDemo],
+  imports: [
+            // RouterOutlet,
+            // MaterialDemo,
+            //Counter
+            Todocrud],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
